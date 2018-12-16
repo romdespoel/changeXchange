@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/offer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="selectOffer"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/offer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/test"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/offer_youwillget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/offer_title"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/offer_current_rate"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:id="@+id/offer_amount_recieve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offer_title"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/offer_youwillget"
+            android:text="@string/load_value"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/offer_youwillget" />
+
+        <TextView
+            android:id="@+id/offer_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/offer_youwillget"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/offer_note_hint"
+            android:text="@string/test"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:id="@+id/offer_poster_hidden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/offer_title"
+            android:layout_marginEnd="102dp"
+            android:layout_marginRight="102dp"
+            android:text="@string/test"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/offer_poster_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/offer_note"
+            android:layout_alignTop="@+id/offer_youwillget"
+            android:text="@string/test"
+            android:layout_alignRight="@+id/offer_note" />
+
+        <TextView
+            android:id="@+id/offer_interests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/offer_note"
+            android:text="@string/test" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/offer_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/offer_youwillget"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            app:srcCompat="@mipmap/baseline_delete_black_48"
+            android:layout_alignParentRight="true"
+            android:focusable="true" />
+
+        <!--Commented out in order to favor clicking on the offer instead.-->
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/offer_edit"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/offer_delete"-->
+            <!--android:layout_alignTop="@+id/offer_star"-->
+            <!--android:layout_alignEnd="@+id/offer_accept"-->
+            <!--android:clickable="true"-->
+            <!--app:srcCompat="@mipmap/baseline_edit_black_48"-->
+            <!--android:focusable="true"-->
+            <!--android:layout_alignRight="@+id/offer_delete" />-->
+
+        <ImageView
+            android:id="@+id/offer_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/offer_delete"
+            android:layout_toRightOf="@id/offer_note"
+            android:layout_below="@+id/offer_youwillget"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <TextView
+            android:id="@+id/offer_num_rat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/offer_note"
+            android:layout_below="@+id/offer_star"
+            android:text="@string/test" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
